@@ -24,7 +24,7 @@ Now, let's take the analogy of [Takeshi's Castle][takishiCastle] - Knock Knock g
 
 We use PSO to increase the possibility of finding better solutions in less time since in many cases we cannot afford to wait for a long time to find the best solution. The swarm of PSO allows us to investigate multiple solutions to the problem at the same time and judge where to go next in the problem space. Now, let's take a very simple example of a numeric minimization problem.
 
-Suppose that you have the function $$ f(x,y)=x-y+7 $$, and I asked you to give me the possible values of $$ x $$ and $$ y $$ so that to minimize the output value of the function. If the range of the possible values is between $$ +100 $$ to $$ -100 $$ for both variables you're obviously going to answer $$ -100 $$ for $$ x $$ and $$ +100 $$ for $$ y $$ which makes the minimum possible value equal to $$ -193 $$. However, it is not as straight forward to a computer. Computers execute algorithms in steps and in those steps we change the value of $$ x $$ and $$ y $$ then check the quality of the solution, more about that in David J. Malan's talk titled “What's an algorithm?”.
+Suppose that you have the function $$ f(x,y)=x-y+7 $$, and I asked you to give me the possible values of $$ x $$ and $$ y $$ so that to minimize the output value of the function. If the range of the possible values is between $$ +100 $$ to $$ -100 $$ for both variables you're obviously going to answer $$ -100 $$ for $$ x $$ and $$ +100 $$ for $$ y $$ which makes the minimum possible value equal to $$ -193 $$. However, it is not as straight forward to a computer. Computers execute algorithms in steps and in those steps we change the value of $$ x $$ and $$ y $$ then check the quality of the solution, more about that in David J. Malan's talk titled “[What's an algorithm?][whatsanalgo]”.
 
 Imagine that we test every possible solution for this problem, making  $$ x=-100 $$ and $$ y=-100 $$ then $$ x=-99 $$ and $$ y=-100 $$ until we reach $$ x=100 $$ and $$ y=100 $$ and keep track of the quality of the solution each time we vary the values of $$ x $$ and $$ y $$. Then, by the end of the algorithm, we would've tried all the possible combinations which equal to $$ 200×200=40,000 $$ different solutions. The problem I gave you before is a kind of a problem we call a toy (simple) problem in computer science. Now, imagine that we have a more complex problem involving $$ 13 $$ variables and a range of values between $$ -100 $$ and $$ +100 $$. Can you guess how many combinations we have here? I will tell you the answer, we have $$ 200^{13} $$ combinations, which is around $$ 8 $$ with $$ 29 $$ zeros after it.
 
@@ -45,6 +45,7 @@ Next, I will be preparing an IPython Notebook to walk you through the implementa
 [takishiCastle]: http://link.hussein.space/takese87f
 [youtubeClip]: http://link.hussein.space/takes8ed7
 [knockKnockDesc]: http://link.hussein.space/listo8bbd
+[whatsanalgo]: http://link.hussein.space/whats81c7
 
 > References:
 
