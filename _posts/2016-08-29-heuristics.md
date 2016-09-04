@@ -38,13 +38,6 @@ Since PSO is a heuristic method with no guarantees of a perfect solution we can 
 Next, I will be preparing an IPython Notebook to walk you through the implementation of the example above so check out the blog later.
 ~~~~
 
-
-[tedTalk]: link.hussein.space/howal8515
-[GeorgePolya]: link.hussein.space/georg3e88
-[DouglasMerrill]: link.hussein.space/douglfc46
-[takishiCastle]: link.hussein.space/takese87f
-[youtubeClip]: link.hussein.space/takes8ed7
-[knockKnockDesc]: link.hussein.space/listo8bbd
 [tedTalk]: http://link.hussein.space/howal8515
 [GeorgePolya]: http://link.hussein.space/georg3e88
 [DouglasMerrill]: http://link.hussein.space/douglfc46
