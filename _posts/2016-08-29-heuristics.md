@@ -39,14 +39,12 @@ Next, I will be preparing an IPython Notebook to walk you through the implementa
 ~~~~
 
 
-<<<<<<< HEAD
 [tedTalk]: link.hussein.space/howal8515
 [GeorgePolya]: link.hussein.space/georg3e88
 [DouglasMerrill]: link.hussein.space/douglfc46
 [takishiCastle]: link.hussein.space/takese87f
 [youtubeClip]: link.hussein.space/takes8ed7
 [knockKnockDesc]: link.hussein.space/listo8bbd
-=======
 [tedTalk]: http://link.hussein.space/howal8515
 [GeorgePolya]: http://link.hussein.space/georg3e88
 [DouglasMerrill]: http://link.hussein.space/douglfc46
@@ -54,7 +52,6 @@ Next, I will be preparing an IPython Notebook to walk you through the implementa
 [youtubeClip]: http://link.hussein.space/takes8ed7
 [knockKnockDesc]: http://link.hussein.space/listo8bbd
 [whatsanalgo]: http://link.hussein.space/whats81c7
->>>>>>> dbb6c80c210397a6bb070d064a9937ba140b6593
 
 > References:
 
