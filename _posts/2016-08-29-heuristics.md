@@ -1,7 +1,7 @@
 ---
 title:  "Heuristics: the art of good guessing"
 date:   2016-08-29 10:51:00
-description: Heuristics AI Swarm Intelligence
+description: Heuristics explained with a simple numeric minimization problem using Particle swarm optimization technique.
 ---
 
 In computer science, we find solutions to problems, and one of the tools we use to solve problems is the algorithm. Algorithms are procedures that a computer follows and executes. However, some algorithms are not always the best way to solve certain very complex problems, problems in which a partial or an approximate solution would suffice.
@@ -33,6 +33,11 @@ Accordingly, to find the solution for the example before on the fastest desktop 
 Now, I will explain how PSO work on the toy problem for simplicity. PSO would start by creating, for example, $$ 100 $$ particles and each particle would get a random value between the given range. For example, Particle-1 numbers would be $$ x=5, y=-90 $$ which would give an answer of $$ 102 $$. Particle-2 with the numbers $$ x=-90, y=10 $$ which would give the answer $$ -93 $$, and so on. Obviously, the answer of Particle-2 is much better so the idea here is for all the other particles to learn from Particle-2 by assigning random numbers that are close to the ones Particle-2 used before. It means that the particles would learn that it is wiser to use negative values for $$ x $$ and positives ones for $$ y $$.
 
 Since PSO is a heuristic method with no guarantees of a perfect solution we can stop running the algorithm at a given point in time and say, OK!, What I found so far is good enough for me. In our previous work [2], however, we used PSO in a combination of other methods and we were able to decrease the running time by about $$ 49% $$ of that of the normal method without compromising the quality of the solution. And that was only possible because the swarm allowed us to reflect the idea of good guessing, making PSO the Leonardo da Vinci of computer algorithms.
+
+~~~~
+Next, I will be preparing an IPython Notebook to walk you through the implementation of the example above so check out the blog later.
+~~~~
+
 
 [tedTalk]: link.hussein.space/howal8515
 [GeorgePolya]: link.hussein.space/georg3e88
