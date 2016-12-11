@@ -4,7 +4,7 @@ date:   2016-12-10 20:13:00
 description: Some of the interesting titles I found in AAAI 2017 list of accepted papers.
 ---
 
-<img style="float: right; width: 60%;" src="{{ site.url }}/assets/images/aaai2017/aaai2017_wordcloud.svg">
+<img style="width: 100%;" src="{{ site.url }}/assets/images/aaai2017/aaai2017_wordcloud.svg">
 
 AAAI 2017 conference accepted around 788 papers. The titles of the accepted papers were published in a [59 pages PDF document][allAcceptedPapers]. Some of the papers are already made online by the authors (many on arxiv.org) while others are still not available.
 
