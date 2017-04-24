@@ -6,7 +6,7 @@ description: In this post, I write about the importance of location name extract
 
 [This post was original shared in Kno.e.sis Research Blog](http://blog.knoesis.org/2016/05/extracting-and-mapping-locations.html)
 
-The meaning of a social media post can be a function of location. For example, the meaning of "The Main Street bridge is closed" is ambiguous without establishing exactly which bridge is in question (The one in Danville, VA or in Columbus, OH). At the same time, location information metadata is sparse, forcing analysis of social media content and context to disambiguate alternative mappings. This article uncovers some of the persisting challenges in the recovery of location information from content and context: Text normalization, implicit location information, Geoparsing, and the future steps of our research.
+The meaning of a social media post can be a function of location. For example, the meaning of "The Main Street bridge is closed" is ambiguous without establishing exactly which bridge is in question (The one in Danville, VA or in Columbus, OH). At the same time, location information metadata is sparse, forcing analysis of social media content and context to disambiguate alternative mappings. This article uncovers some of the persisting challenges in the recovery of location information from content and context: Text normalization, ambiguous location information, Geoparsing, and the future steps of our research.
 
 Consider the Tweet in Figure 1. It contains valuable, but implicit information for Disaster Response and Flood Modeling. Here the user provides the level of water during a  storm surge. Knowledge-based inference supports the enrichment of this claim to determine that the water level is around 3 meters (to the height of a first floor)<a title="The issue of reliability and trustworthiness of the extracted information are relevant to our project but are not discussed here."><sup>*</sup></a>. If we knew the location of Ganapathi colony, this quantitative data can inform a storm surge model to predict the direction of the surge and the danger it might pose.
 
@@ -38,7 +38,7 @@ Similarly, direction and distance markers allow us to retrieve toponyms the mark
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 Fig. 4: Tweet mentioning a toponym (“101 Fwy”) pointed at by a direction marker
 
-Two challenges arise in Toponym extraction:  Text normalization and implicit location information.
+Two challenges arise in Toponym extraction:  Text normalization and ambiguous location information.
 
 ***Text normalization***. Text normalization involves subtasks such as abbreviations and acronyms expansion and misspelling corrections. Figure 5 shows an example of a tweet with such difficulties. The author of the tweet used “Rd” as an abbreviation of “road”. Moreover, the text “Kilpauk Garden” is incomplete relative to the Gazetteer name  “Kilpauk, Aspiran Garden Colony”.
 
@@ -48,13 +48,13 @@ Fig. 5: An example tweet with abbreviations (Rd) and incomplete information (Kil
 
 Locations can also be embedded in hashtags or usernames. For example, both @yankeestadium and #YankeeStadium refer to the location name “Yankee Stadium”. Therefore, such location mentions can also be extracted using a word segmentation (tokenization) method. The method uses a classifier on unigram and bigram language models of word frequencies to find word boundaries.
 
-***Implicit Location Information***. Location information is not always explicit. The relative directionality and distance content noted above hints at this problem.  Consider  the following tweet (Figure 6) as a more challenging example:
+***Ambiguous Location Information***. Location information is not always explicit. The relative directionality and distance content noted above hints at this problem.  Consider  the following tweet (Figure 6) as a more challenging example:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Our house in Chennai fully flooded. Everyone evacuated safely. My brother trying to get there from Mumbai...</p>&mdash; Karun Chandhok (@karunchandhok) <a href="https://twitter.com/karunchandhok/status/671980121176281088">December 2, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-Fig. 6: A tweet showing an implicit mention of a location.
+Fig. 6: A tweet showing an ambiguous mention of a location.
 
-In this example, a renowned author (Indian racing driver Karun Chandhok) is implicitly referring to his parent’s house.  Ideally, the location of the house could be extracted from a knowledge base. The extracted toponym “our house” should then be mapped to an absolute  location name. This extracted piece of information can then provide us with the fact that people are evacuating from his parents’ area. For another example of using a knowledge base (or location database) to identify a building name (Nariman House) is shown in Figure 2 of this article on [Citizen Sensing](http://knoesis.org/sites/default/files/S09-citizen-sensor-IC.pdf).
+In this example, a renowned author (Indian racing driver Karun Chandhok) is referring to his parent’s house.  Ideally, the location of the house could be extracted from a knowledge base. The extracted toponym "our house" should then be mapped to an absolute location name. This extracted piece of information can then provide us with the fact that people are evacuating from his parents’ area. For another example of using a knowledge base (or location database) to identify a building name (Nariman House) is shown in Figure 2 of this article on [Citizen Sensing](http://knoesis.org/sites/default/files/S09-citizen-sensor-IC.pdf).
 
 # Geoparsing
 
@@ -71,7 +71,7 @@ Other things our research is addressing is the problem of disambiguation during 
 
 # Conclusions
 
-Toponym extraction and Geoparsing require more than text normalization and the retrieval of unambiguous location names from the text. The disaster relief scenario aids in the identification of several important, and the research challenges yet to be solved well, such as implicit location information and more advanced Geoparsing disambiguations. The [Kno.e.sis center](http://knoesis.org/)'s mission “[Computing for Human Experience](http://wiki.knoesis.org/index.php/Computing_For_Human_Experience)”, drives the recognition of these challenges while providing  ground impact beyond lab implementations.
+Toponym extraction and Geoparsing require more than text normalization and the retrieval of unambiguous location names from the text. The disaster relief scenario aids in the identification of several important, and the research challenges yet to be solved well, such as ambiguous location information and more advanced Geoparsing disambiguations. The [Kno.e.sis center](http://knoesis.org/)'s mission “[Computing for Human Experience](http://wiki.knoesis.org/index.php/Computing_For_Human_Experience)”, drives the recognition of these challenges while providing  ground impact beyond lab implementations.
 
 ## References:
 
