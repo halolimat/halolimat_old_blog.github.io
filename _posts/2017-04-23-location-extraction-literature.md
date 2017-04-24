@@ -8,7 +8,7 @@ description: In this post, I write about the importance of location name extract
 
 The meaning of a social media post can be a function of location. For example, the meaning of "The Main Street bridge is closed" is ambiguous without establishing exactly which bridge is in question (The one in Danville, VA or in Columbus, OH). At the same time, location information metadata is sparse, forcing analysis of social media content and context to disambiguate alternative mappings. This article uncovers some of the persisting challenges in the recovery of location information from content and context: Text normalization, implicit location information, Geoparsing, and the future steps of our research.
 
-Consider the Tweet in Figure 1. It contains valuable, but implicit information for Disaster Response and Flood Modeling. Here the user provides the level of water during a  storm surge. Knowledge-based inference supports the enrichment of this claim to determine that the water level is around 3 meters (to the height of a first floor)<a title="The issue of reliability and trustworthiness of the extracted information are relevant to our project but are not discussed here."><sup>1</sup></a>. If we knew the location of Ganapathi colony, this quantitative data can inform a storm surge model to predict the direction of the surge and the danger it might pose.
+Consider the Tweet in Figure 1. It contains valuable, but implicit information for Disaster Response and Flood Modeling. Here the user provides the level of water during a  storm surge. Knowledge-based inference supports the enrichment of this claim to determine that the water level is around 3 meters (to the height of a first floor)<a title="The issue of reliability and trustworthiness of the extracted information are relevant to our project but are not discussed here."><sup>*</sup></a>. If we knew the location of Ganapathi colony, this quantitative data can inform a storm surge model to predict the direction of the surge and the danger it might pose.
 
 <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/ChennaiRainsHelp?src=hash">#ChennaiRainsHelp</a> water hitting first floor. need to evacuate Ganapathi colony. <a href="https://twitter.com/ChennaiRains">@ChennaiRains</a> <a href="https://twitter.com/ndtv">@ndtv</a> <a href="https://t.co/rNvx4i4JVH">pic.twitter.com/rNvx4i4JVH</a></p>&mdash; Balaji (@blaji) <a href="https://twitter.com/blaji/status/671942649570398208">December 2, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -40,7 +40,7 @@ Fig. 4: Tweet mentioning a toponym (“101 Fwy”) pointed at by a direction mar
 
 Two challenges arise in Toponym extraction:  Text normalization and implicit location information.
 
-***Text normalization***. Text normalization involves subtasks such as abbreviations and acronyms expansion and misspelling corrections. Figure 5 shows an example of a tweet with such difficulties. The author of the tweet used “Rd” as an abbreviation of “road”. Moreover, the text “Kilpauk Garden” is incomplete relative to the Gazetteer name  “Kilpauk, Aspiran Garden Colony”<sup>2</sup>.
+***Text normalization***. Text normalization involves subtasks such as abbreviations and acronyms expansion and misspelling corrections. Figure 5 shows an example of a tweet with such difficulties. The author of the tweet used “Rd” as an abbreviation of “road”. Moreover, the text “Kilpauk Garden” is incomplete relative to the Gazetteer name  “Kilpauk, Aspiran Garden Colony”.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">2 ppl need to be evacuated frm #21, New Avadi Rd, Kilpauk Garden (Nr. Zam Zam Bakery) Contact 9841546767 <a href="https://twitter.com/hashtag/ChennaiRainsHelp?src=hash">#ChennaiRainsHelp</a> <a href="https://twitter.com/hashtag/chennairains?src=hash">#chennairains</a></p>&mdash; Raj!n! Followers™ (@RajiniFollowers) <a href="https://twitter.com/RajiniFollowers/status/671730645383569408">December 1, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -65,21 +65,13 @@ Geoparsing can be performed through a gazetteer matching process that allows us 
 ![GoogleMap](https://lh6.googleusercontent.com/zXtdf1ZctavtrdWwlwkbfJW4g0-epqVRHBUbPYOowDiyhPh1liVirCCobP623Tqm8XW1IzbcC3xpknAXffrvspfV7VITZ9Hfvxvbr-d4pH_x9Ihab9Om42N09VHhRhfKRrroTV7L)
 Fig. 7: Pinpointing the full location name of the extracted toponym from the tweet in Figure 5: “No. 17/7, New Avadi Road, Kilpauk, Aspiran Garden Colony, Kilpauk, Chennai, Tamil Nadu 600010, India”
 
-A typical gazetteer matching task requires complex text normalization and missing data restoration. To overcome some of the difficulties posed by Twitter data we typically use fuzzy text matching during toponym extraction, in addition to the previously discussed text normalization process. As for the incompleteness of gazetteers, a combination of one or more additional knowledge bases can be used. An example of such dictionaries is a list of points of interest<sup>3</sup> that can be retrieved from an external data source.
+A typical gazetteer matching task requires complex text normalization and missing data restoration. To overcome some of the difficulties posed by Twitter data we typically use fuzzy text matching during toponym extraction, in addition to the previously discussed text normalization process. As for the incompleteness of gazetteers, a combination of one or more additional knowledge bases can be used. An example of such dictionaries is a list of points of interest<a title="Area specific points of interest (for example, in Chennai) are typically businesses, hospitals, shopping malls, etc."><sup>*</sup></a> that can be retrieved from an external data source.
 
 Other things our research is addressing is the problem of disambiguation during Geoparsing. If a toponym name has many records in the gazetteer, the method should reasonably disambiguate which location the tweet was referring to. This problem includes the Whole-Part Relationship (i.e., which section of the road and which campus of a university). Using the provided context from text as shown in Figure 4, where the toponym “101 Fwy” is supposed to be “between Woodman Ave and Coldwater Canyon”, can tremendously help in solving such problems. Our research is currently investigating such problems and possible solutions.
 
 # Conclusions
 
 Toponym extraction and Geoparsing require more than text normalization and the retrieval of unambiguous location names from the text. The disaster relief scenario aids in the identification of several important, and the research challenges yet to be solved well, such as implicit location information and more advanced Geoparsing disambiguations. The [Kno.e.sis center](http://knoesis.org/)'s mission “[Computing for Human Experience](http://wiki.knoesis.org/index.php/Computing_For_Human_Experience)”, drives the recognition of these challenges while providing  ground impact beyond lab implementations.
-
-## Footnotes:
-
-1 The issue of reliability and trustworthiness of the extracted information are relevant to our project but are not discussed here.
-
-2 The correct location found using Google Maps [goo.gl/AN9Gxr](goo.gl/AN9Gxr)
-
-3 Area specific points of interest (for example, in Chennai) are typically businesses, hospitals, shopping malls, etc.
 
 ## References:
 
