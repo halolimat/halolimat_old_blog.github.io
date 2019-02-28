@@ -2,6 +2,7 @@
 title:  "Interesting Accepted Titles in AAAI'17"
 #date:   2016-12-10 20:13:00
 description: Some of the interesting titles I found in AAAI 2017 list of accepted papers.
+hidden: true
 ---
 
 <img style="width: 100%;" src="{{ site.url }}/assets/images/aaai2017/aaai2017_wordcloud.svg">
